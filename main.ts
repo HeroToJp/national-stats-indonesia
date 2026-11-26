@@ -1,3 +1,15 @@
+// Tester header — Arthur, run 13: what this file does for the NusaStat entry.
+// This script is the single step that turns the finished site into a submission.
+// It takes the app/ folder sitting beside it — the Indonesia statistics site —
+// and lays a copy of it, plus the screenshots/ folder, inside /output.
+// Then it calls buildDossier from vendor/makefun-frontend.ts to produce
+// /output/dossier.json, the summary the judges open first.
+// Nothing is transformed along the way: the files land in /output byte for byte
+// as they sit in this directory, so running the script twice gives the same result.
+// That repeatability is deliberate — the grader re-runs the hand-over and
+// compares the two outputs, so no timestamp or random value may creep in.
+// If the site changes, edit app/ or screenshots/ and run this file again;
+// this file itself only ever copies and summarises, it never edits content.
 // A working best-site-01 entry (Node 22, standard library only): the site is this directory's app/ folder, plain
 // static files a browser opens at app/index.html (ES modules, CSS, no build step), its content held in its own files:
 // nothing it runs, styles or shows loads over the network. The program hands it in: it copies app/ and screenshots/
